@@ -1,10 +1,10 @@
-# <a href="https://lattearts.tonynguyen61.com" target="_blank" rel="noopener noreferrer">Visit</a>
+# <a href="https://latteart.tonynguyen61.com" target="_blank" rel="noopener noreferrer">Visit</a>
 
 # A personal gallery of latte arts that I made.
 
 ## To run gallery locally
 
-1. Clone the repo `git clone https://github.com/nhhoang-tony/Latte-arts.git`
+1. Clone the repo `git clone https://github.com/nhhoang-tony/Latte-art.git`
 
 2. Ensure you have Node installed on your system
 
