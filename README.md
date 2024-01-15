@@ -4,7 +4,7 @@
 
 ## To run gallery locally
 
-1. Clone the repo `git clone https://github.com/nhhoang-tony/latte-arts.git`
+1. Clone the repo `git clone https://github.com/nhhoang-tony/Latte-arts.git`
 
 2. Ensure you have Node installed on your system
 
