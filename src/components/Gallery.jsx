@@ -88,7 +88,7 @@ export default function Gallery() {
               } ${buttonClasses}`}
               onClick={() => handleSelectLatteArtType(button)}
             >
-              <img className='h-[45%]' src={`/static/img/${button}.svg`}></img>
+              <img className='h-[45%]' src={`/static/img/${button}.svg`} loading='lazy'></img>
             </button>
           </div>
         ))}

@@ -13,6 +13,7 @@ export default function Photo({ latteArt, classes, onShowPhoto }) {
               className='w-full h-[350px] object-cover hover:scale-110 transition-transform ease duration-500 brightness-110'
               src={`/static/img/${latteArt.photo}`}
               onClick={() => onShowPhoto(latteArt.photo)}
+              loading='lazy'
             ></img>
           )}
           {latteArt.photo.includes('mp4') && (

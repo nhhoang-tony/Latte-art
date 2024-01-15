@@ -9,6 +9,7 @@ export default function ZoomPhoto({ photoPath, hidePhoto }) {
         <img
           src={`/static/img/${photoPath}`}
           className='max-w-[700px] max-h-[700px] w-4/5 rounded-3xl z-10 brightness-110'
+          loading='lazy'
         ></img>
       )}
       {photoPath.includes('mp4') && (
