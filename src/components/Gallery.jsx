@@ -1,4 +1,4 @@
-import Project from './Photo';
+import Photo from './Photo';
 import latteArt from '../../latte-art.json';
 import { useMemo, useState } from 'react';
 import { shuffle } from '../util/latteArtUtils';
@@ -100,12 +100,12 @@ export default function Gallery() {
 
       <div className='flex flex-wrap justify-center gap-8 mx-auto pt-4 sm:pt-12 pb-12 px-0 sm:px-4 overflow-y-scroll w-[90%] max-w-[1600px]'>
         {displayLatteArt.map((latteArt) => (
-          <Project
+          <Photo
             key={latteArt.photo}
             latteArt={latteArt}
             classes={latteArtClasses}
             onShowPhoto={handleShowZoomPhoto}
-          ></Project>
+          ></Photo>
         ))}
         <div className={`h-0 ${latteArtClasses}`}></div>
         <div className={`h-0 ${latteArtClasses}`}></div>

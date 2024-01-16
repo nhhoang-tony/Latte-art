@@ -1,7 +1,7 @@
 export default function ZoomPhoto({ photoPath, hidePhoto }) {
   return (
     <div
-      className='fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center animation'
+      className='fixed bg-[#091712f2] top-0 left-0 w-full h-full flex flex-col justify-center items-center animation'
       onClick={hidePhoto}
     >
       <div className='fixed w-full h-full bg-[#0f0e18] opacity-95 z-0'></div>
