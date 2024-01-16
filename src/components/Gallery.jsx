@@ -98,7 +98,7 @@ export default function Gallery() {
         ))}
       </div>
 
-      <div className='flex flex-wrap justify-center gap-8 mx-auto pt-4 sm:pt-12 pb-12 px-0 sm:px-4 overflow-y-scroll w-[90%] max-w-[1600px]'>
+      <div className='flex flex-wrap justify-center gap-8 mx-auto pt-4 sm:pt-12 px-0 sm:px-4 overflow-y-scroll w-[90%] max-w-[1600px]'>
         {displayLatteArt.map((latteArt) => (
           <Photo
             key={latteArt.photo}
