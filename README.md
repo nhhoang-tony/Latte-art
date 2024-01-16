@@ -1,6 +1,6 @@
 # <a href="https://latteart.tonynguyen61.com" target="_blank" rel="noopener noreferrer">Visit</a>
 
-# A personal gallery of latte arts that I made.
+# A personal gallery of latte art that I made.
 
 ## To run gallery locally
 

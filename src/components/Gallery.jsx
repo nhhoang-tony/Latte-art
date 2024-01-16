@@ -1,13 +1,13 @@
 import Project from './Photo';
-import latteArts from '../../latte-arts.json';
+import latteArt from '../../latte-art.json';
 import { useMemo, useState } from 'react';
 import { shuffle } from '../util/latteArtUtils';
 import ZoomPhoto from './ZoomPhoto';
 
-let displayLatteArts = [];
+let displayLatteArt = [];
 
 export default function Gallery() {
-  const latteArtsClasses =
+  const latteArtClasses =
     'min-w-[250px] max-w-[350px] bg-[#17161b] rounded-2xl overflow-hidden text-center shadow-[0_1px_6px_rgba(0,0,0,0.3)] flex-[1_1_calc(20%-1rem)]';
 
   const buttonHolderClasses =
@@ -40,31 +40,31 @@ export default function Gallery() {
 
   useMemo(() => {
     if (latteArtFilter === '') {
-      displayLatteArts = showAllPhotoLatteArts();
+      displayLatteArt = showAllPhotoLatteArt();
     } else {
-      displayLatteArts = showSelectedLatteArtsType(latteArtFilter);
+      displayLatteArt = showSelectedLatteArtType(latteArtFilter);
     }
   }, [latteArtFilter]);
 
-  function showAllPhotoLatteArts() {
-    let displayLatteArts = latteArts.filter(
+  function showAllPhotoLatteArt() {
+    let displayLatteArt = latteArt.filter(
       (latteArt) => !latteArt.tags.includes('video')
     );
-    displayLatteArts = shuffle(displayLatteArts);
+    displayLatteArt = shuffle(displayLatteArt);
 
-    return displayLatteArts;
+    return displayLatteArt;
   }
 
-  function showSelectedLatteArtsType(type) {
-    let displayLatteArts = latteArts.filter((latteArt) =>
+  function showSelectedLatteArtType(type) {
+    let displayLatteArt = latteArt.filter((latteArt) =>
       latteArt.tags.includes(latteArtFilter)
     );
-    displayLatteArts = shuffle(displayLatteArts);
+    displayLatteArt = shuffle(displayLatteArt);
 
-    return displayLatteArts;
+    return displayLatteArt;
   }
 
-  // display selected latte arts type
+  // display selected latte art type
   function handleSelectLatteArtType(type) {
     setLatteArtFilter((prevState) => {
       if (prevState === '') {
@@ -95,17 +95,17 @@ export default function Gallery() {
       </div>
 
       <div className='flex flex-wrap justify-center gap-8 mx-auto pt-4 sm:pt-12 pb-12 px-0 sm:px-4 overflow-y-scroll w-[90%] max-w-[1600px]'>
-        {displayLatteArts.map((latteArt) => (
+        {displayLatteArt.map((latteArt) => (
           <Project
             key={latteArt.photo}
             latteArt={latteArt}
-            classes={latteArtsClasses}
+            classes={latteArtClasses}
             onShowPhoto={handleShowZoomPhoto}
           ></Project>
         ))}
-        <div className={`h-0 ${latteArtsClasses}`}></div>
-        <div className={`h-0 ${latteArtsClasses}`}></div>
-        <div className={`h-0 ${latteArtsClasses}`}></div>
+        <div className={`h-0 ${latteArtClasses}`}></div>
+        <div className={`h-0 ${latteArtClasses}`}></div>
+        <div className={`h-0 ${latteArtClasses}`}></div>
       </div>
       {showZoomPhoto.show && (
         <ZoomPhoto
