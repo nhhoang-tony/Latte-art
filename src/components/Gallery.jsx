@@ -11,7 +11,7 @@ export default function Gallery() {
     'min-w-[250px] max-w-[350px] bg-[#17161b] rounded-2xl overflow-hidden text-center shadow-[0_1px_6px_rgba(0,0,0,0.3)] flex-[1_1_calc(20%-1rem)]';
 
   const buttonHolderClasses =
-    'flex justify-center min-m-100px w-[30%] max-w-[30%] m-4';
+    'flex justify-center min-m-100px w-[28%] max-w-[30%] m-4';
 
   const buttonClasses =
     'flex items-center justify-center capitalize text-2xl sm:text-3xl h-16 w-32 sm:w-36 sm:max-w-36 bg-[#688b96] border-solid border-2 border-[#688b96] text-[#0f0e18] rounded-xl cursor-pointer hover:bg-[#fba615] hover:border-[#fba615] transition-colors ease duration-200';
@@ -79,7 +79,7 @@ export default function Gallery() {
 
   return (
     <>
-      <div className='flex flex-wrap flex-[1_1_calc(33%-1rem)] justify-center w-full'>
+      <div className='flex flex-wrap justify-center w-[70%] max-w-[1200px] mx-auto'>
         {buttonList.map((button) => (
           <div key={button} className={buttonHolderClasses}>
             <button
