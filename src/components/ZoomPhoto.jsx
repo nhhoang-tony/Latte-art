@@ -4,11 +4,11 @@ export default function ZoomPhoto({ photoPath, hidePhoto }) {
       className='fixed bg-[#17161b] top-0 left-0 w-full h-full flex flex-col justify-center items-center animation'
       onClick={hidePhoto}
     >
-      <div className='fixed w-full h-full bg-[#091712f2] opacity-95 z-0'></div>
+      <div className='fixed w-full h-full bg-[#0f0e18] opacity-95 z-0'></div>
       {photoPath.includes('jpeg') && (
         <img
           src={`/static/img/${photoPath}`}
-          className='max-w-[700px] max-h-[700px] w-[95%] rounded-3xl z-10 brightness-110'
+          className='max-w-[700px] max-h-[700px] w-[95%] rounded-3xl z-10 brightness-110 bg-[#091712f2]'
           loading='lazy'
         ></img>
       )}
