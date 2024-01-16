@@ -25,11 +25,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(
       circle at top,
-      rgba(9, 23, 18, 0.98),
-      rgba(9, 23, 18, 0.98)
+      rgba(9, 23, 18, 0.95),
+      rgba(9, 23, 18, 0.95)
     ),
     url('/static/img/cup-of-coffee.png');
-  background-size: 300px;
+  background-size: 250px;
   background-repeat: repeat;
   color: #d9e2f1;
   min-height: 100vh;
