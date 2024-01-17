@@ -17,6 +17,20 @@ export default function Gallery() {
     'flex items-center justify-center capitalize text-2xl sm:text-3xl h-16 w-32 sm:w-36 sm:max-w-36 bg-[#688b96] border-solid border-2 border-[#688b96] text-[#0f0e18] rounded-xl cursor-pointer hover:bg-[#fba615] hover:border-[#fba615] active:bg-[#fba615] active:border-[#fba615] transition-colors ease duration-200';
 
   const buttonList = ['swan', 'heart', 'rosetta', 'tulip', 'video', 'creative'];
+  const videoLists = [
+    {
+      photo: 'video-1.mp4',
+    },
+    {
+      photo: 'video-2.mp4',
+    },
+    {
+      photo: 'video-3.mp4',
+    },
+    {
+      photo: 'video-4.mp4',
+    },
+  ];
 
   const [latteArtFilter, setLatteArtFilter] = useState('');
   const [showZoomPhoto, setShowZoomPhoto] = useState({
@@ -105,6 +119,13 @@ export default function Gallery() {
             latteArt={latteArt}
             classes={latteArtClasses}
             onShowPhoto={handleShowZoomPhoto}
+          ></Photo>
+        ))}
+        {videoLists.map((video) => (
+          <Photo
+            key={video.photo}
+            latteArt={video}
+            classes={`hidden ${latteArtClasses}`}
           ></Photo>
         ))}
         <div className={`h-0 ${latteArtClasses}`}></div>
