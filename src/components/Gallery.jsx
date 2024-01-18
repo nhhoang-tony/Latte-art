@@ -14,7 +14,7 @@ export default function Gallery() {
     'flex justify-center min-m-100px w-[28%] max-w-[30%] m-4';
 
   const buttonClasses =
-    'flex items-center justify-center capitalize text-2xl sm:text-3xl h-16 w-32 sm:w-36 sm:max-w-36 bg-[#688b96] border-solid border-2 border-[#688b96] text-[#0f0e18] rounded-xl cursor-pointer hover:bg-[#fba615] hover:border-[#fba615] active:bg-[#fba615] active:border-[#fba615] transition-colors ease duration-200';
+    'flex items-center justify-center capitalize text-2xl sm:text-3xl h-16 w-32 sm:w-36 sm:max-w-36 bg-[#688b96] border-solid border-[3px] border-[#688b96] text-[#0f0e18] rounded-xl cursor-pointer hover:bg-[#fba615] hover:border-[#fba615] active:bg-[#fba615] active:border-[#fba615] transition-colors ease duration-200';
 
   const buttonList = ['swan', 'heart', 'rosetta', 'tulip', 'video', 'creative'];
   const videoLists = [
