@@ -16,7 +16,6 @@ export default function ZoomPhoto({ photoPath, hidePhoto }) {
         <video
           className='fixed max-w-[700px] max-h-[700px] w-[95%] rounded-3xl z-10 brightness-110'
           src={`/static/img/${photoPath}`}
-          type='video/mp4'
           loop
           autoPlay
           muted

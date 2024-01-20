@@ -4,20 +4,27 @@ import { useMemo, useState } from 'react';
 import { shuffle } from '../util/latteArtUtils';
 import ZoomPhoto from './ZoomPhoto';
 
-let displayLatteArt = [];
+let displayLatteArt: { photo: string; tags: string[]; id: number }[] = [];
 
 export default function Gallery() {
-  const latteArtClasses =
+  const latteArtClasses: string =
     'min-w-[250px] max-w-[350px] bg-[#17161b] rounded-2xl overflow-hidden text-center shadow-[0_1px_6px_rgba(0,0,0,0.3)] flex-[1_1_calc(20%-1rem)]';
 
-  const buttonHolderClasses =
+  const buttonHolderClasses: string =
     'flex justify-center min-m-100px w-[28%] max-w-[30%] m-4';
 
-  const buttonClasses =
+  const buttonClasses: string =
     'flex items-center justify-center capitalize text-2xl sm:text-3xl h-16 w-32 sm:w-36 sm:max-w-36 bg-[#688b96] border-solid border-[3px] border-[#688b96] text-[#0f0e18] rounded-xl cursor-pointer hover:bg-[#fba615] hover:border-[#fba615] active:bg-[#fba615] active:border-[#fba615] transition-colors ease duration-200';
 
-  const buttonList = ['swan', 'heart', 'rosetta', 'tulip', 'video', 'creative'];
-  const videoLists = [
+  const buttonList: string[] = [
+    'swan',
+    'heart',
+    'rosetta',
+    'tulip',
+    'video',
+    'creative',
+  ];
+  const videoLists: { photo: string }[] = [
     {
       photo: 'video-1.mp4',
     },
@@ -126,6 +133,7 @@ export default function Gallery() {
             key={video.photo}
             latteArt={video}
             classes={`hidden ${latteArtClasses}`}
+            onShowPhoto={handleShowZoomPhoto}
           ></Photo>
         ))}
         <div className={`h-0 ${latteArtClasses}`}></div>

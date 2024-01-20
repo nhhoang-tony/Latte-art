@@ -20,7 +20,6 @@ export default function Photo({ latteArt, classes, onShowPhoto }) {
             <video
               className='w-full h-[350px] object-cover brightness-110'
               src={`/static/img/${latteArt.photo}`}
-              type='video/mp4'
               loop
               autoPlay
               muted
